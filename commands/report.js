@@ -24,7 +24,7 @@ module.exports.run = async (bot, message, args) => {
         .setDescription("Error! Couldn't deliver report!")
         .setColor("#f20000");
 
-        let reportChannel = message.guild.channels.find(`name`, "modlog");
+        let reportChannel = message.guild.channels.find(`name`, "mods-only");
         if(!reportChannel) return message.channel.send(errorEmbed);
 
         reportChannel.send(embed);
